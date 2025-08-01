@@ -9,13 +9,14 @@ import net.minecraft.client.gui.GuiMainMenu;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.EventBus;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import static com.github.zacgamingpro1234.packtils.config.PacktilsConfig.Optiwarn;
-import static com.github.zacgamingpro1234.packtils.config.PacktilsConfig.ignui;
+import org.lwjgl.opengl.Display;
+import static com.github.zacgamingpro1234.packtils.config.PacktilsConfig.*;
 
 @Mod(modid = Packtils.MODID, name = Packtils.NAME, version = Packtils.VERSION)
 public class Packtils {
@@ -28,7 +29,14 @@ public class Packtils {
     public static final Logger LOGGER = LogManager.getLogger("packtils");
 
     @Mod.EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
+        config = new PacktilsConfig(); //Makes The Config Work In-Game
+        Display.setTitle(title);
+    }
+
+    @Mod.EventHandler
     public void init(FMLInitializationEvent event){
+        LOGGER.info("FMLso its like rn inithihi");
         TheBus.register(new Object(){
             @SubscribeEvent
             public void onClientTick(TickEvent.ClientTickEvent event) {
@@ -47,7 +55,7 @@ public class Packtils {
 
     @Subscribe
     public void onInit(InitializationEvent event) {
-        config = new PacktilsConfig(); //Makes The Config Work In-Game
+        LOGGER.info("so its like rn inithihi");
         if (Optiwarn){
             new Thread(() -> {
                 try {
