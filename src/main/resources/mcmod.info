@@ -2,16 +2,16 @@
   {
     "modid": "${id}",
     "name": "${name}",
-    "description": "",
+    "description": "A Minecraft Modpack Utility",
     "version": "${version}",
     "mcversion": "${mcVersionStr}",
-    "url": "",
-    "updateUrl": "",
+    "url": "https://modrinth.com/mod/packtils",
+    "updateUrl": "https://modrinth.com/mod/packtils/versions",
     "authorList": [
       "Zacgamingpro1234"
     ],
     "credits": "",
-    "logoFile": "",
+    "logoFile": "Assets/logo.png",
     "screenshots": [],
     "dependencies": []
   }
