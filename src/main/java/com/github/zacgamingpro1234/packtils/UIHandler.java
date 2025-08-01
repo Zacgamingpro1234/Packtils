@@ -46,17 +46,17 @@ public class UIHandler extends GuiScreen {
     private void createbut(){
         this.buttonList.add(new GuiButton(
                 1,               // ID
-                (int) ((this.width / 2.4) - ((double) 100 / 2)),   // X position
+                (int) ((this.width * .60) - ((double) 100 / 2)),   // X position
                 (int) (this.height/1.8),   // Y position
                 100, 20,              // Width, Height
-                "Nah, I Don't need it, my gaming chair gives me enough fps"       // Text
+                "Ignore FOREVER"       // Text
         ));
         this.buttonList.add(new GuiButton(
                 2,               // ID
-                (int) ((this.width / 1.6) - ((double) 100 / 2)),   // X position
+                (int) ((this.width * .40) - ((double) 100 / 2)),   // X position
                 (int) (this.height/1.8),   // Y position
                 100, 20,              // Width, Height
-                "Yes ples my pc is ass"       // Text
+                "Download Optifine"       // Text
         ));
     }
 
