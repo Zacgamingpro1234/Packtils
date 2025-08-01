@@ -33,9 +33,7 @@ public class PacktilsConfig extends Config {
             name = "Update Title",    // name beside the button
             text = "Update"        // text on the button itself
     )
-    Runnable runnable = () -> {
-        Display.setTitle(title);
-    };
+    Runnable runnable = () -> Display.setTitle(title);
 
     public PacktilsConfig() {
         // Available mod types: PVP, HUD, UTIL_QOL, HYPIXEL, SKYBLOCK
