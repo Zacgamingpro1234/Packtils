@@ -6,26 +6,22 @@ import cc.polyfrost.oneconfig.config.annotations.Switch;
 import cc.polyfrost.oneconfig.config.annotations.Text;
 import cc.polyfrost.oneconfig.config.data.Mod;
 import cc.polyfrost.oneconfig.config.data.ModType;
-import cc.polyfrost.oneconfig.config.data.OptionSize;
 import org.lwjgl.opengl.Display;
 
 public class PacktilsConfig extends Config {
     @Switch(
-            name = "Warn The User If Optifine Is NOT Installed",
-            size = OptionSize.SINGLE
+            name = "Warn The User If Optifine Is NOT Installed"
     )
     public static boolean Optiwarn = true;
 
     @Switch(
-            name = "Ignore All UI Pop-ups",
-            size = OptionSize.SINGLE
+            name = "Ignore All UI Pop-ups"
     )
     public static boolean ignui = false;
 
     @Text(
             name = "Custom Title",
-            placeholder = "Minecraft 1.8.9",        // optional, text to display when there is nothing written there
-            secure = false, multiline = false
+            placeholder = "Minecraft 1.8.9"        // optional, text to display when there is nothing written there
     )
     public static String title = "Minecraft 1.8.9";
 
